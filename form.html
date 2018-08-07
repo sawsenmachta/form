@@ -1,0 +1,71 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="form.css" />
+    
+</head>
+<body>
+        <div class="container" >
+                <form onsubmit="check()" action="#">
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="fname">First Name:</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="lastname">Last Name:</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="adress">Adress:</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="adress" name="adress" placeholder="Your Adress..">
+                    </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-25">
+                          <label for="email">Email:</label>
+                        </div>
+                        <div class="col-75">
+                          <input type="text" id="email" name="email" placeholder="Your email.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="">
+                        </div>
+                  </div>
+                  <div class="row">
+                            <div class="col-25">
+                              <label for="password">Password:</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Le mot de passe doit etre une combinaison de caractères,numéros et au moins une lettre majiscule" id="password" name="password" placeholder="Your password..">
+                            </div>
+                          </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="comment">Comment:</label>
+                    </div>
+                    <div class="col-75">
+                      <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="submit" value="Send" onsubmit="check()">
+                    <input type="reset"  value="Reset">
+                  </div>
+                </form>
+              </div>
+              <script src="form.js"></script>           
+</body>
+</html>
+
